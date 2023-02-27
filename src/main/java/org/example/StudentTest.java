@@ -1,7 +1,6 @@
 package org.example;
 import java.util.*;
 import java.util.logging.Logger;
-import java.lang.*;
 class Student{
     String studentname;
     int studentage;
@@ -61,18 +60,18 @@ class StudentTest {
         list.add(s1);
         list.add(s2);
         list.add(s3);
-        System.out.println("Unsorted array");
+        l.info("Unsorted array");
         for(int i=0;i<count;i++){
-            System.out.println("The student name is "+list.get(i).getter1());
-            System.out.println("The Student age is "+list.get(i).getter2());
-            System.out.println("The student gpa is "+list.get(i).getter3());
+            l.log(Level.INFO ()->"The student name is "+list.get(i).getter1());
+            l.log(Level.INFO ()->"The Student age is "+list.get(i).getter2());
+            l.log(Level.INFO ()->"The student gpa is "+list.get(i).getter3());
         }
-        System.out.println("Sorted  Array");
+        l.info("Sorted  Array");
         Collections.sort(list,new Main());
         for(int i=0;i<count;i++){
-            System.out.println("The student name is "+list.get(i).getter1());
-            System.out.println("The Student age is "+list.get(i).getter2());
-            System.out.println("The studentgpa is "+list.get(i).getter3());
+            l.log(Level.INFO ()->"The student name is "+list.get(i).getter1());
+            l.log(Level.INFO ()->"The Student age is "+list.get(i).getter2());
+            l.log(Level.INFO ()->"The studentgpa is "+list.get(i).getter3());
         }
 
     }
